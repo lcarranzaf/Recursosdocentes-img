@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 480" width="460" height="480">
+  <!-- Fondo -->
+  <rect width="460" height="480" fill="#eff6ff" rx="12"/>
+
+  <!-- Pierna izquierda -->
+  <rect x="162" y="290" width="35" height="128" fill="#fbbf24" rx="14" stroke="#f59e0b" stroke-width="2"/>
+  <!-- Pie izquierdo -->
+  <rect x="148" y="408" width="58" height="20" fill="#1e3a8a" rx="8"/>
+
+  <!-- Pierna derecha -->
+  <rect x="203" y="290" width="35" height="128" fill="#fbbf24" rx="14" stroke="#f59e0b" stroke-width="2"/>
+  <!-- Pie derecho -->
+  <rect x="194" y="408" width="58" height="20" fill="#1e3a8a" rx="8"/>
+
+  <!-- Sombra pies -->
+  <ellipse cx="200" cy="440" rx="52" ry="9" fill="#cbd5e1" opacity="0.45"/>
+
+  <!-- Tronco -->
+  <rect x="150" y="155" width="100" height="143" fill="#3b82f6" rx="18" stroke="#2563eb" stroke-width="2"/>
+  <!-- Bolsillo decorativo -->
+  <rect x="163" y="184" width="26" height="20" fill="none" stroke="#93c5fd" stroke-width="1.5" rx="3"/>
+
+  <!-- Brazo izquierdo -->
+  <rect x="108" y="160" width="42" height="105" fill="#3b82f6" rx="14" stroke="#2563eb" stroke-width="2"/>
+  <!-- Mano izquierda -->
+  <circle cx="129" cy="273" r="24" fill="#fcd9a0" stroke="#f0a060" stroke-width="2"/>
+  <line x1="117" y1="261" x2="111" y2="254" stroke="#f0a060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="121" y1="258" x2="117" y2="250" stroke="#f0a060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="129" y1="256" x2="129" y2="248" stroke="#f0a060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="137" y1="258" x2="141" y2="250" stroke="#f0a060" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Brazo derecho -->
+  <rect x="250" y="160" width="42" height="105" fill="#3b82f6" rx="14" stroke="#2563eb" stroke-width="2"/>
+  <!-- Mano derecha -->
+  <circle cx="271" cy="273" r="24" fill="#fcd9a0" stroke="#f0a060" stroke-width="2"/>
+  <line x1="259" y1="261" x2="253" y2="254" stroke="#f0a060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="263" y1="258" x2="259" y2="250" stroke="#f0a060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="271" y1="256" x2="271" y2="248" stroke="#f0a060" stroke-width="2" stroke-linecap="round"/>
+  <line x1="279" y1="258" x2="283" y2="250" stroke="#f0a060" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Cuello -->
+  <rect x="187" y="143" width="26" height="18" fill="#fcd9a0" stroke="#f0a060" stroke-width="1"/>
+
+  <!-- Orejas -->
+  <ellipse cx="138" cy="102" rx="12" ry="16" fill="#fcd9a0" stroke="#f0a060" stroke-width="2"/>
+  <ellipse cx="262" cy="102" rx="12" ry="16" fill="#fcd9a0" stroke="#f0a060" stroke-width="2"/>
+
+  <!-- Cabeza -->
+  <circle cx="200" cy="100" r="62" fill="#fcd9a0" stroke="#f0a060" stroke-width="2.5"/>
+
+  <!-- Pelo -->
+  <path d="M143 85 Q148 35 200 32 Q252 35 257 85 Q260 95 257 100 Q252 72 200 70 Q148 72 143 100 Z" fill="#5c3317"/>
+
+  <!-- Mejillas -->
+  <circle cx="165" cy="116" r="13" fill="#ff9988" opacity="0.45"/>
+  <circle cx="235" cy="116" r="13" fill="#ff9988" opacity="0.45"/>
+
+  <!-- Cejas -->
+  <path d="M165 80 Q178 74 191 80" stroke="#5c3317" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M209 80 Q222 74 235 80" stroke="#5c3317" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Ojo izquierdo -->
+  <ellipse cx="178" cy="96" rx="14" ry="15" fill="white"/>
+  <circle cx="178" cy="98" r="9" fill="#5c3317"/>
+  <circle cx="178" cy="98" r="5" fill="#111"/>
+  <circle cx="174" cy="93" r="3" fill="white"/>
+
+  <!-- Ojo derecho -->
+  <ellipse cx="222" cy="96" rx="14" ry="15" fill="white"/>
+  <circle cx="222" cy="98" r="9" fill="#5c3317"/>
+  <circle cx="222" cy="98" r="5" fill="#111"/>
+  <circle cx="218" cy="93" r="3" fill="white"/>
+
+  <!-- Nariz -->
+  <ellipse cx="200" cy="111" rx="5" ry="4" fill="#f0a060"/>
+
+  <!-- Boca / Sonrisa -->
+  <path d="M183 124 Q200 140 217 124" stroke="#e07040" stroke-width="3" fill="#ff9988" stroke-linecap="round"/>
+
+  <!-- ── ETIQUETAS ── -->
+
+  <!-- Cabeza -->
+  <line x1="258" y1="78" x2="318" y2="52" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <rect x="318" y="39" width="90" height="28" fill="white" rx="7" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="363" y="58" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">Cabeza</text>
+
+  <!-- Tronco -->
+  <line x1="250" y1="222" x2="318" y2="222" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <rect x="318" y="209" width="90" height="28" fill="white" rx="7" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="363" y="228" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">Tronco</text>
+
+  <!-- Brazo -->
+  <line x1="108" y1="192" x2="48" y2="175" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <rect x="0" y="162" width="82" height="28" fill="white" rx="7" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="41" y="181" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">Brazo</text>
+
+  <!-- Mano -->
+  <line x1="108" y1="273" x2="48" y2="283" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <rect x="0" y="270" width="82" height="28" fill="white" rx="7" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="41" y="289" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">Mano</text>
+
+  <!-- Pierna -->
+  <line x1="250" y1="350" x2="318" y2="355" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <rect x="318" y="342" width="90" height="28" fill="white" rx="7" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="363" y="361" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">Pierna</text>
+
+  <!-- Pie -->
+  <line x1="250" y1="420" x2="318" y2="426" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <rect x="318" y="413" width="70" height="28" fill="white" rx="7" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="353" y="432" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">Pie</text>
+</svg>

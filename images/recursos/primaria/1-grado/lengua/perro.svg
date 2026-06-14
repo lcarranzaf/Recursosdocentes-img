@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="160" height="140">
+  <!-- Tail -->
+  <path d="M 118 75 Q 148 55 140 32" stroke="#C48A4A" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <!-- Body -->
+  <ellipse cx="82" cy="90" rx="44" ry="30" fill="#D9A96A"/>
+  <!-- Neck -->
+  <rect x="44" y="62" width="22" height="22" rx="8" fill="#D9A96A"/>
+  <!-- Head -->
+  <circle cx="42" cy="52" r="28" fill="#D9A96A"/>
+  <!-- Ear left (floppy down) -->
+  <ellipse cx="17" cy="50" rx="11" ry="18" fill="#B8763A" transform="rotate(-10 17 50)"/>
+  <!-- Ear right (floppy down) -->
+  <ellipse cx="65" cy="40" rx="10" ry="16" fill="#B8763A" transform="rotate(15 65 40)"/>
+  <!-- Muzzle -->
+  <ellipse cx="42" cy="60" rx="16" ry="12" fill="#EEC88A"/>
+  <!-- Eye left -->
+  <circle cx="31" cy="46" r="5" fill="#2D1B0E"/>
+  <circle cx="33" cy="44" r="1.5" fill="white"/>
+  <!-- Eye right -->
+  <circle cx="53" cy="44" r="5" fill="#2D1B0E"/>
+  <circle cx="55" cy="42" r="1.5" fill="white"/>
+  <!-- Eyebrow left -->
+  <path d="M 27 39 Q 31 36 35 39" stroke="#B8763A" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Eyebrow right -->
+  <path d="M 49 37 Q 53 34 57 37" stroke="#B8763A" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <ellipse cx="42" cy="55" rx="6" ry="4" fill="#3D2010"/>
+  <ellipse cx="41" cy="54" rx="2" ry="1" fill="#6B3820" opacity="0.5"/>
+  <!-- Mouth -->
+  <path d="M 35 63 Q 42 70 49 63" stroke="#3D2010" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Tongue -->
+  <ellipse cx="42" cy="68" rx="5" ry="4" fill="#E05A6A"/>
+  <!-- Legs front -->
+  <rect x="46" y="112" width="14" height="20" rx="7" fill="#D9A96A"/>
+  <rect x="64" y="114" width="14" height="18" rx="7" fill="#D9A96A"/>
+  <!-- Legs back -->
+  <rect x="84" y="112" width="14" height="20" rx="7" fill="#D9A96A"/>
+  <rect x="100" y="110" width="14" height="22" rx="7" fill="#D9A96A"/>
+  <!-- Spot on body -->
+  <ellipse cx="95" cy="85" rx="14" ry="10" fill="#B8763A" opacity="0.4"/>
+  <!-- Collar -->
+  <rect x="30" y="72" width="26" height="7" rx="3" fill="#E05A6A"/>
+  <circle cx="43" cy="76" r="3" fill="#FFD700"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" width="160" height="120">
+  <!-- Table shadow -->
+  <ellipse cx="80" cy="116" rx="60" ry="6" fill="#00000015"/>
+  <!-- Table top -->
+  <rect x="10" y="28" width="140" height="16" rx="5" fill="#C8874A"/>
+  <rect x="10" y="28" width="140" height="8" rx="5" fill="#D99A60"/>
+  <!-- Table top edge highlight -->
+  <rect x="12" y="29" width="136" height="3" rx="3" fill="#E8B07A" opacity="0.6"/>
+  <!-- Leg front-left -->
+  <rect x="24" y="44" width="14" height="68" rx="5" fill="#B07840"/>
+  <rect x="24" y="44" width="6" height="68" rx="5" fill="#C8874A" opacity="0.5"/>
+  <!-- Leg front-right -->
+  <rect x="122" y="44" width="14" height="68" rx="5" fill="#B07840"/>
+  <rect x="122" y="44" width="6" height="68" rx="5" fill="#C8874A" opacity="0.5"/>
+  <!-- Leg back-left (slightly behind) -->
+  <rect x="36" y="44" width="11" height="62" rx="4" fill="#A06830" opacity="0.7"/>
+  <!-- Leg back-right (slightly behind) -->
+  <rect x="113" y="44" width="11" height="62" rx="4" fill="#A06830" opacity="0.7"/>
+  <!-- Wood grain lines on top -->
+  <path d="M 20 33 Q 80 30 140 33" stroke="#B07840" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <path d="M 20 37 Q 80 34 140 37" stroke="#B07840" stroke-width="0.8" fill="none" opacity="0.4"/>
+</svg>

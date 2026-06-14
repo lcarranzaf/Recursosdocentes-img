@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" width="320" height="160">
+  <!-- Fondo suave -->
+  <rect width="320" height="160" rx="10" fill="#fefce8"/>
+  <!-- Línea divisoria -->
+  <line x1="160" y1="10" x2="160" y2="150" stroke="#fde68a" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- ═══ PERRO GRANDE (izquierda) ═══ -->
+  <!-- Cola -->
+  <path d="M 120 70 Q 145 55 138 38" stroke="#C48A4A" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <!-- Cuerpo -->
+  <ellipse cx="85" cy="90" rx="38" ry="26" fill="#D9A96A"/>
+  <!-- Cuello -->
+  <rect x="52" y="68" width="20" height="20" rx="7" fill="#D9A96A"/>
+  <!-- Cabeza -->
+  <circle cx="42" cy="58" r="24" fill="#D9A96A"/>
+  <!-- Oreja izq -->
+  <ellipse cx="22" cy="52" rx="9" ry="15" fill="#B8763A" transform="rotate(-10 22 52)"/>
+  <!-- Oreja der -->
+  <ellipse cx="60" cy="44" rx="8" ry="13" fill="#B8763A" transform="rotate(12 60 44)"/>
+  <!-- Hocico -->
+  <ellipse cx="42" cy="65" rx="13" ry="10" fill="#EEC88A"/>
+  <!-- Ojo izq -->
+  <circle cx="33" cy="54" r="4" fill="#2D1B0E"/>
+  <circle cx="35" cy="52" r="1.2" fill="white"/>
+  <!-- Ojo der -->
+  <circle cx="51" cy="52" r="4" fill="#2D1B0E"/>
+  <circle cx="53" cy="50" r="1.2" fill="white"/>
+  <!-- Nariz -->
+  <ellipse cx="42" cy="61" rx="5" ry="3.5" fill="#3D2010"/>
+  <!-- Boca -->
+  <path d="M 36 68 Q 42 74 48 68" stroke="#3D2010" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Lengua -->
+  <ellipse cx="42" cy="72" rx="4" ry="3.5" fill="#E05A6A"/>
+  <!-- Patas -->
+  <rect x="52" y="108" width="13" height="18" rx="6" fill="#D9A96A"/>
+  <rect x="68" y="110" width="13" height="16" rx="6" fill="#D9A96A"/>
+  <rect x="86" y="108" width="13" height="18" rx="6" fill="#D9A96A"/>
+  <rect x="101" y="106" width="13" height="20" rx="6" fill="#D9A96A"/>
+  <!-- Collar -->
+  <rect x="32" y="76" width="22" height="6" rx="3" fill="#E05A6A"/>
+  <circle cx="43" cy="79" r="2.5" fill="#FFD700"/>
+  <!-- Sombra -->
+  <ellipse cx="80" cy="128" rx="38" ry="5" fill="#00000010"/>
+
+  <!-- ═══ PERRO PEQUEÑO (derecha) ═══ -->
+  <!-- Cola -->
+  <path d="M 263 100 Q 278 91 275 82" stroke="#C48A4A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Cuerpo -->
+  <ellipse cx="240" cy="115" rx="22" ry="15" fill="#D9A96A"/>
+  <!-- Cuello -->
+  <rect x="222" y="102" width="12" height="12" rx="5" fill="#D9A96A"/>
+  <!-- Cabeza -->
+  <circle cx="216" cy="96" r="14" fill="#D9A96A"/>
+  <!-- Oreja izq -->
+  <ellipse cx="206" cy="91" rx="5" ry="9" fill="#B8763A" transform="rotate(-10 206 91)"/>
+  <!-- Oreja der -->
+  <ellipse cx="225" cy="87" rx="5" ry="8" fill="#B8763A" transform="rotate(12 225 87)"/>
+  <!-- Hocico -->
+  <ellipse cx="216" cy="100" rx="8" ry="6" fill="#EEC88A"/>
+  <!-- Ojo izq -->
+  <circle cx="210" cy="93" r="2.5" fill="#2D1B0E"/>
+  <circle cx="211" cy="92" r="0.8" fill="white"/>
+  <!-- Ojo der -->
+  <circle cx="221" cy="91" r="2.5" fill="#2D1B0E"/>
+  <circle cx="222" cy="90" r="0.8" fill="white"/>
+  <!-- Nariz -->
+  <ellipse cx="216" cy="97" rx="3" ry="2.2" fill="#3D2010"/>
+  <!-- Boca -->
+  <path d="M 212 103 Q 216 107 220 103" stroke="#3D2010" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Patas -->
+  <rect x="222" y="123" width="8" height="11" rx="4" fill="#D9A96A"/>
+  <rect x="232" y="124" width="8" height="10" rx="4" fill="#D9A96A"/>
+  <rect x="244" y="123" width="8" height="11" rx="4" fill="#D9A96A"/>
+  <rect x="252" y="122" width="8" height="12" rx="4" fill="#D9A96A"/>
+  <!-- Collar -->
+  <rect x="209" y="107" width="14" height="4" rx="2" fill="#E05A6A"/>
+  <circle cx="216" cy="109" r="1.5" fill="#FFD700"/>
+  <!-- Sombra -->
+  <ellipse cx="238" cy="136" rx="22" ry="3" fill="#00000010"/>
+</svg>

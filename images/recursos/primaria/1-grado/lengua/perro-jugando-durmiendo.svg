@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" width="320" height="160">
+  <!-- Fondo -->
+  <rect width="320" height="160" rx="10" fill="#f0fdf4"/>
+  <!-- Línea divisoria -->
+  <line x1="160" y1="10" x2="160" y2="150" stroke="#bbf7d0" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- ═══ PERRO JUGANDO (izquierda) ═══ -->
+  <!-- Cola levantada feliz -->
+  <path d="M 118 72 Q 140 50 132 28" stroke="#C48A4A" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <!-- Cuerpo -->
+  <ellipse cx="82" cy="92" rx="36" ry="24" fill="#D9A96A"/>
+  <!-- Cuello -->
+  <rect x="50" y="72" width="18" height="18" rx="7" fill="#D9A96A"/>
+  <!-- Cabeza -->
+  <circle cx="40" cy="62" r="22" fill="#D9A96A"/>
+  <!-- Orejas -->
+  <ellipse cx="21" cy="56" rx="8" ry="14" fill="#B8763A" transform="rotate(-10 21 56)"/>
+  <ellipse cx="57" cy="48" rx="8" ry="12" fill="#B8763A" transform="rotate(12 57 48)"/>
+  <!-- Hocico -->
+  <ellipse cx="40" cy="69" rx="12" ry="9" fill="#EEC88A"/>
+  <!-- Ojos (felices — arcos) -->
+  <path d="M 30 58 Q 33 54 37 58" stroke="#2D1B0E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 43 56 Q 46 52 50 56" stroke="#2D1B0E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Nariz -->
+  <ellipse cx="40" cy="65" rx="5" ry="3.5" fill="#3D2010"/>
+  <!-- Boca feliz grande -->
+  <path d="M 33 72 Q 40 80 47 72" stroke="#3D2010" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Lengua afuera -->
+  <ellipse cx="40" cy="77" rx="5" ry="5" fill="#E05A6A"/>
+  <!-- Collar -->
+  <rect x="30" y="80" width="20" height="5" rx="2.5" fill="#E05A6A"/>
+  <circle cx="40" cy="82" r="2" fill="#FFD700"/>
+  <!-- Patas -->
+  <rect x="50" y="108" width="12" height="16" rx="6" fill="#D9A96A"/>
+  <rect x="65" y="110" width="12" height="14" rx="6" fill="#D9A96A"/>
+  <rect x="83" y="108" width="12" height="16" rx="6" fill="#D9A96A"/>
+  <rect x="97" y="106" width="12" height="18" rx="6" fill="#D9A96A"/>
+  <!-- Pelota -->
+  <circle cx="30" cy="122" r="14" fill="#f97316"/>
+  <path d="M 20 116 Q 30 108 40 116" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M 18 124 Q 30 130 42 124" stroke="white" stroke-width="2" fill="none"/>
+  <!-- Sombra -->
+  <ellipse cx="78" cy="126" rx="36" ry="4" fill="#00000010"/>
+
+  <!-- ═══ PERRO DURMIENDO (derecha) ═══ -->
+  <!-- Cuerpo acurrucado -->
+  <ellipse cx="248" cy="110" rx="46" ry="28" fill="#D9A96A" transform="rotate(-8 248 110)"/>
+  <!-- Cabeza recostada -->
+  <circle cx="208" cy="102" r="20" fill="#D9A96A"/>
+  <!-- Oreja izq (caída) -->
+  <ellipse cx="196" cy="110" rx="7" ry="13" fill="#B8763A" transform="rotate(15 196 110)"/>
+  <!-- Oreja der -->
+  <ellipse cx="222" cy="94" rx="7" ry="11" fill="#B8763A" transform="rotate(-5 222 94)"/>
+  <!-- Hocico -->
+  <ellipse cx="208" cy="108" rx="11" ry="8" fill="#EEC88A"/>
+  <!-- Ojos cerrados -->
+  <path d="M 200 99 Q 204 96 208 99" stroke="#2D1B0E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M 210 97 Q 214 94 218 97" stroke="#2D1B0E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Nariz -->
+  <ellipse cx="208" cy="105" rx="4" ry="3" fill="#3D2010"/>
+  <!-- Boca relajada -->
+  <path d="M 203 111 Q 208 114 213 111" stroke="#3D2010" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Cola enrollada -->
+  <path d="M 290 100 Q 310 90 308 108 Q 306 120 292 118" stroke="#B8763A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Patas dobladas -->
+  <rect x="220" y="122" width="28" height="10" rx="5" fill="#C8954A" transform="rotate(-5 220 122)"/>
+  <rect x="256" y="124" width="28" height="10" rx="5" fill="#C8954A" transform="rotate(3 256 124)"/>
+  <!-- Zzz -->
+  <path d="M 228 72 L 244 72 L 228 62 L 244 62" stroke="#6B7280" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 246 60 L 257 60 L 246 52 L 257 52" stroke="#9CA3AF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 258 50 L 265 50 L 258 44 L 265 44" stroke="#D1D5DB" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Sombra -->
+  <ellipse cx="248" cy="136" rx="44" ry="4" fill="#00000010"/>
+</svg>

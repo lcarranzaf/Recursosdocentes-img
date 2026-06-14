@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 130" width="100" height="130">
+  <!-- Palm -->
+  <rect x="18" y="55" width="64" height="58" rx="14" fill="#F5C89A"/>
+  <!-- Thumb -->
+  <path d="M 18 75 Q 2 72 2 58 Q 2 44 14 44 Q 24 44 24 56" fill="#F5C89A" stroke="#E8A870" stroke-width="1"/>
+  <!-- Index finger -->
+  <rect x="22" y="14" width="16" height="46" rx="8" fill="#F5C89A"/>
+  <!-- Middle finger -->
+  <rect x="42" y="8" width="16" height="52" rx="8" fill="#F5C89A"/>
+  <!-- Ring finger -->
+  <rect x="62" y="14" width="16" height="46" rx="8" fill="#F5C89A"/>
+  <!-- Pinky finger -->
+  <rect x="76" y="24" width="12" height="38" rx="6" fill="#F5C89A"/>
+  <!-- Outline to give depth -->
+  <rect x="18" y="55" width="64" height="58" rx="14" fill="none" stroke="#E8A870" stroke-width="1.5"/>
+  <rect x="22" y="14" width="16" height="46" rx="8" fill="none" stroke="#E8A870" stroke-width="1.5"/>
+  <rect x="42" y="8" width="16" height="52" rx="8" fill="none" stroke="#E8A870" stroke-width="1.5"/>
+  <rect x="62" y="14" width="16" height="46" rx="8" fill="none" stroke="#E8A870" stroke-width="1.5"/>
+  <rect x="76" y="24" width="12" height="38" rx="6" fill="none" stroke="#E8A870" stroke-width="1.5"/>
+  <!-- Knuckle lines -->
+  <path d="M 26 52 Q 30 50 38 52" stroke="#E8A870" stroke-width="1" fill="none"/>
+  <path d="M 46 46 Q 50 44 58 46" stroke="#E8A870" stroke-width="1" fill="none"/>
+  <path d="M 66 52 Q 70 50 78 52" stroke="#E8A870" stroke-width="1" fill="none"/>
+  <!-- Wrist -->
+  <path d="M 18 110 Q 18 128 50 128 Q 82 128 82 110" fill="#F5C89A" stroke="#E8A870" stroke-width="1.5"/>
+  <!-- Wrist line -->
+  <path d="M 22 115 Q 50 120 78 115" stroke="#E8A870" stroke-width="1" fill="none"/>
+</svg>
