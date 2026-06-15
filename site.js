@@ -66,6 +66,10 @@
       "#rd-menu .rd-brand{color:#0f172a !important;font-weight:800;padding:14px 18px;font-size:18px;letter-spacing:-.2px}",
       "#rd-menu .rd-brand b{color:#2563eb}",
       "#rd-menu .rd-spacer{flex:1}",
+      "#rd-menu .rd-links{display:flex;flex:1;align-items:center}",
+      "#rd-menu .rd-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;margin:5px 12px 5px 4px;border:0;background:none;border-radius:9px;color:#374151;cursor:pointer}",
+      "#rd-menu .rd-burger:hover{background:rgba(0,0,0,.05)}",
+      "#rd-menu .rd-burger svg{width:24px;height:24px;display:block}",
       "#rd-menu .rd-mi{position:relative}",
       "#rd-menu .rd-mi>a,#rd-menu .rd-mi>button{display:block;padding:10px 14px;margin:7px 2px;border-radius:9px;color:#374151 !important;background:none;border:0;font:inherit;font-weight:600;font-size:14.5px;cursor:pointer}",
       "#rd-menu .rd-mi.has>button::after{content:'\\25BE';font-size:10px;margin-left:6px;opacity:.55}",
@@ -76,7 +80,20 @@
       "#rd-menu .rd-mi:hover .rd-sub,#rd-menu .rd-mi.open .rd-sub{display:block}",
       "#rd-menu .rd-sub a{display:block;padding:10px 12px;border-radius:8px;color:#1f2937 !important;font-weight:500;font-size:14px}",
       "#rd-menu .rd-sub a:hover{background:#eff6ff;color:#1d4ed8 !important}",
-      "@media (max-width:760px){#rd-menu{padding-bottom:4px}#rd-menu .rd-spacer{flex-basis:100%}#rd-menu .rd-sub{position:static;box-shadow:none;border:0;min-width:100%;padding:0 0 6px 10px}}",
+      "@media (max-width:760px){" +
+        "#rd-menu{flex-wrap:nowrap;padding-bottom:0}" +
+        "#rd-menu .rd-burger{display:flex;margin-left:auto}" +
+        "#rd-menu .rd-links{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;padding:4px 10px 10px}" +
+        "#rd-menu.nav-open{flex-wrap:wrap}" +
+        "#rd-menu.nav-open .rd-links{display:flex}" +
+        "#rd-menu .rd-spacer{display:none}" +
+        "#rd-menu .rd-mi{width:100%}" +
+        "#rd-menu .rd-mi>a,#rd-menu .rd-mi>button{margin:2px 0;width:100%;text-align:left}" +
+        "#rd-menu .rd-mi.has>button{display:flex;align-items:center;justify-content:space-between}" +
+        "#rd-menu .rd-mi.has>button::after{margin-left:0}" +
+        "#rd-menu .rd-sub{position:static;box-shadow:none;border:0;min-width:100%;padding:0 0 6px 10px}" +
+        "#rd-menu .rd-cta{display:block;width:100%;text-align:center;margin:8px 0 4px}" +
+      "}",
 
       /* ------------------------ CONTENEDOR ------------------------ */
       "#rd-app{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;max-width:1120px;margin:0 auto;padding:26px 18px 50px}",
@@ -209,18 +226,25 @@
   /* ============================== MENÚ ============================== */
   function buildMenu() {
     if (document.getElementById("rd-menu")) return;
-    var html = '<a class="rd-brand" href="/">Recurso<b>Docentes</b></a>' +
-               '<div class="rd-mi"><a href="/">Inicio</a></div>';
+    var burgerIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+                     'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                     '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/>' +
+                     '<line x1="3" y1="18" x2="21" y2="18"/></svg>';
+    var links = '<div class="rd-mi"><a href="/">Inicio</a></div>';
     Object.keys(TAX).forEach(function (nivel) {
-      html += '<div class="rd-mi has"><button type="button">' + nivel + '</button><div class="rd-sub">';
+      links += '<div class="rd-mi has"><button type="button">' + nivel + '</button><div class="rd-sub">';
       TAX[nivel].forEach(function (g) {
         var num = g.split("°")[0];
-        html += '<a href="' + gradeLink(nivel, g) + '">' + num + '° de ' + nivel + '</a>';
+        links += '<a href="' + gradeLink(nivel, g) + '">' + num + '° de ' + nivel + '</a>';
       });
-      html += '</div></div>';
+      links += '</div></div>';
     });
-    html += '<span class="rd-spacer"></span>';
-    html += '<a class="rd-mi rd-cta" href="' + gradeLink("Primaria", "1° grado") + '">Explorar recursos</a>';
+    links += '<span class="rd-spacer"></span>';
+    links += '<a class="rd-mi rd-cta" href="' + gradeLink("Primaria", "1° grado") + '">Explorar recursos</a>';
+
+    var html = '<a class="rd-brand" href="/">Recurso<b>Docentes</b></a>' +
+               '<button class="rd-burger" type="button" aria-label="Abrir menú" aria-expanded="false">' + burgerIcon + '</button>' +
+               '<div class="rd-links">' + links + '</div>';
 
     var bar = document.createElement("nav");
     bar.id = "rd-menu";
@@ -228,13 +252,25 @@
     document.body.insertBefore(bar, document.body.firstChild);
 
     bar.addEventListener("click", function (e) {
-      var btn = e.target.closest("button"); if (!btn) return;
+      // Hamburguesa: abre/cierra la lista de enlaces en mobile
+      var burger = e.target.closest(".rd-burger");
+      if (burger) {
+        var open = bar.classList.toggle("nav-open");
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
+        return;
+      }
+      // Botones de nivel (Primaria/Secundaria): abren su submenú
+      var btn = e.target.closest(".rd-mi > button"); if (!btn) return;
       var mi = btn.parentNode, was = mi.classList.contains("open");
       bar.querySelectorAll(".rd-mi.open").forEach(function (x) { x.classList.remove("open"); });
       if (!was) mi.classList.add("open");
     });
     document.addEventListener("click", function (e) {
-      if (!e.target.closest("#rd-menu")) bar.querySelectorAll(".rd-mi.open").forEach(function (x) { x.classList.remove("open"); });
+      if (!e.target.closest("#rd-menu")) {
+        bar.classList.remove("nav-open");
+        var b = bar.querySelector(".rd-burger"); if (b) b.setAttribute("aria-expanded", "false");
+        bar.querySelectorAll(".rd-mi.open").forEach(function (x) { x.classList.remove("open"); });
+      }
     });
   }
 
