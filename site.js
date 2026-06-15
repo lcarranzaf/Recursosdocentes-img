@@ -41,7 +41,7 @@
   function par(k) { return new URLSearchParams(location.search).get(k) || ""; }
   function esc(s) { return (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
   function gradeLink(n, g) { return "/?n=" + encodeURIComponent(n) + "&g=" + encodeURIComponent(g); }
-  function materiaLink(m) { return "/?m=" + encodeURIComponent(m); }
+  function materiaLink(m) { return "/?mat=" + encodeURIComponent(m); }
 
   /* ============================== CSS ============================== */
   function injectCSS() {
@@ -418,7 +418,7 @@
                 gradeLink(nivel, grado) + '">Todas</a>';
     MNAMES.forEach(function (mt) {
       chips += '<a class="rd-chip' + (materia === mt ? " on" : "") + '" href="' +
-        gradeLink(nivel, grado) + "&m=" + encodeURIComponent(mt) + '">' + mt + '</a>';
+        gradeLink(nivel, grado) + "&mat=" + encodeURIComponent(mt) + '">' + mt + '</a>';
     });
     chips += '</div>';
     APP.innerHTML = '<section class="rd-sec"><p class="sk">' + esc(nivel) + '</p><h2 class="sh">' + esc(grado) +
@@ -453,7 +453,7 @@
   }
 
   function route() {
-    var n = par("n"), g = par("g"), m = par("m");
+    var n = par("n"), g = par("g"), m = par("mat");
     if (n && g) renderListing(n, g, m);
     else if (m) renderMateria(m);
     else renderLanding();
