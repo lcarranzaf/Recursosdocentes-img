@@ -55,6 +55,9 @@
       ".bg-photo,.bg-photo-overlay,.bg-photo-container{display:none !important;background:none !important;background-image:none !important}",
       "#header,header#header,.header-outer,.Header,.header-widget,.cover-image,.page_body .centered-top-container{display:none !important}",
       ".rd-home .blog-posts,.rd-home .blog-pager,.rd-home .post-feeds,.rd-home .no-posts-message,.rd-home .FeaturedPost{display:none !important}",
+      /* ocultar barra lateral de Contempo (Archivo / Etiquetas / Denunciar abuso) y ensanchar contenido */
+      ".sidebar-container,.column-left-outer,.column-right-outer,.widget.BlogArchive,.widget.Label,.widget.ReportAbuse,#ReportAbuse1,.Attribution{display:none !important}",
+      ".main-column,.column-center-outer,.centered-bottom .main-column-wrapper{width:100% !important;max-width:100% !important;float:none !important;margin:0 !important;padding:0 !important}",
       /* enlaces de Contempo no deben pintar de azul nuestras tarjetas */
       "#rd-app a,#rd-foot a,#rd-menu a{text-decoration:none}",
 
@@ -114,6 +117,7 @@
       ".rd-lv{position:relative;display:block;border-radius:24px;padding:30px;border:1px solid;overflow:hidden;transition:box-shadow .18s,transform .18s}",
       ".rd-lv:hover{box-shadow:0 16px 38px -16px rgba(15,23,42,.28);transform:translateY(-3px)}",
       ".rd-lv .big{position:absolute;right:-8px;top:-26px;font-size:150px;font-weight:900;line-height:1;letter-spacing:-.06em;color:#fff;opacity:.55;pointer-events:none}",
+      ".rd-lv .head{display:block;position:relative}",
       ".rd-lv .k{position:relative;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin:0 0 6px}",
       ".rd-lv h3{position:relative;font-size:32px;font-weight:800;margin:0 0 6px;letter-spacing:-.01em}",
       ".rd-lv .sub{position:relative;font-size:15px;opacity:.8;margin:0 0 18px}",
@@ -324,12 +328,14 @@
     var chips = grados.map(function (g) {
       return '<a href="' + gradeLink(nivel, g) + '">' + g.split("°")[0] + '°</a>';
     }).join("");
-    return '<a class="rd-lv ' + cls + '" href="' + gradeLink(nivel, grados[0]) + '">' +
+    // OJO: la tarjeta es un <div>, NO un <a> (no se pueden anidar enlaces dentro de enlaces).
+    return '<div class="rd-lv ' + cls + '">' +
              '<span class="big">123</span>' +
-             '<p class="k">Nivel</p><h3>' + nivel + '</h3><p class="sub">' + sub + '</p>' +
+             '<a class="head" href="' + gradeLink(nivel, grados[0]) + '">' +
+               '<p class="k">Nivel</p><h3>' + nivel + '</h3><p class="sub">' + sub + '</p></a>' +
              '<div class="chips">' + chips + '</div>' +
-             '<span class="more">Ver recursos del nivel →</span>' +
-           '</a>';
+             '<a class="more" href="' + gradeLink(nivel, grados[0]) + '">Ver recursos del nivel →</a>' +
+           '</div>';
   }
 
   /* ============================== LISTADO ============================== */
