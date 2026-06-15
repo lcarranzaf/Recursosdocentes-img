@@ -51,6 +51,8 @@
       "html,body,.body-fauxcolumn-outer{background:#fafaf7 !important}",
       "body{background-image:none !important}",
       ".body-fauxcolumn-outer,.header-outer,.Header .titlewrapper,.header-widget{background:none !important;background-image:none !important}",
+      /* el atardecer de Contempo = .bg-photo (no es background del body) */
+      ".bg-photo,.bg-photo-overlay,.bg-photo-container{display:none !important;background:none !important;background-image:none !important}",
       "#header,header#header,.header-outer,.Header,.header-widget,.cover-image,.page_body .centered-top-container{display:none !important}",
       ".rd-home .blog-posts,.rd-home .blog-pager,.rd-home .post-feeds,.rd-home .no-posts-message,.rd-home .FeaturedPost{display:none !important}",
       /* enlaces de Contempo no deben pintar de azul nuestras tarjetas */
