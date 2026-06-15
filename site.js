@@ -63,8 +63,8 @@
 
       /* --------------------------- MENÚ --------------------------- */
       "#rd-menu{position:sticky;top:0;z-index:99999;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}",
-      "#rd-menu .rd-nav{max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center}",
-      "#rd-menu .rd-brand{color:#0f172a !important;font-weight:800;padding:14px 18px;font-size:18px;letter-spacing:-.2px}",
+      "#rd-menu .rd-nav{max-width:none;margin:0;display:flex;flex-wrap:wrap;align-items:center;padding:0 clamp(20px,4vw,56px)}",
+      "#rd-menu .rd-brand{color:#0f172a !important;font-weight:800;padding:14px 0;font-size:18px;letter-spacing:-.2px}",
       "#rd-menu .rd-brand b{color:#2563eb}",
       "#rd-menu .rd-spacer{flex:1}",
       "#rd-menu .rd-links{display:flex;flex:1;align-items:center}",
@@ -75,7 +75,7 @@
       "#rd-menu .rd-mi>a,#rd-menu .rd-mi>button{display:block;padding:10px 14px;margin:7px 2px;border-radius:9px;color:#374151 !important;background:none;border:0;font:inherit;font-weight:600;font-size:14.5px;cursor:pointer}",
       "#rd-menu .rd-mi.has>button::after{content:'\\25BE';font-size:10px;margin-left:6px;opacity:.55}",
       "#rd-menu .rd-mi:hover>a,#rd-menu .rd-mi:hover>button,#rd-menu .rd-mi.open>button{background:rgba(0,0,0,.05)}",
-      "#rd-menu .rd-cta{background:#2563eb !important;color:#fff !important;margin:7px 14px 7px 4px;padding:10px 16px}",
+      "#rd-menu .rd-cta{background:#2563eb !important;color:#fff !important;margin:7px 0 7px 4px;padding:10px 16px}",
       "#rd-menu .rd-cta:hover{background:#1d4ed8 !important}",
       "#rd-menu .rd-sub{position:absolute;left:0;top:100%;min-width:210px;background:#fff;border:1px solid #eef0f3;border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.14);display:none;overflow:hidden;padding:6px}",
       "#rd-menu .rd-mi:hover .rd-sub,#rd-menu .rd-mi.open .rd-sub{display:block}",
@@ -97,7 +97,7 @@
       "}",
 
       /* ------------------------ CONTENEDOR ------------------------ */
-      "#rd-app{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;max-width:1280px;margin:0 auto;padding:26px 18px 50px}",
+      "#rd-app{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;max-width:none;margin:0;padding:26px clamp(20px,4vw,56px) 50px}",
       "#rd-app *{box-sizing:border-box}",
 
       /* ---------------------------- HERO -------------------------- */
@@ -190,7 +190,7 @@
 
       /* -------------------------- FOOTER -------------------------- */
       "#rd-foot{background:#111827;color:#cbd5e1;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin-top:40px}",
-      "#rd-foot .in{max-width:1280px;margin:0 auto;padding:48px 18px 28px}",
+      "#rd-foot .in{max-width:none;margin:0;padding:48px clamp(20px,4vw,56px) 28px}",
       "#rd-foot .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}",
       "#rd-foot h5{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin:0 0 16px}",
       "#rd-foot .brand{font-size:19px;font-weight:800;color:#fff !important;display:inline-block;margin-bottom:12px}",
