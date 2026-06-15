@@ -62,7 +62,8 @@
       "#rd-app a,#rd-foot a,#rd-menu a{text-decoration:none}",
 
       /* --------------------------- MENÚ --------------------------- */
-      "#rd-menu{position:sticky;top:0;z-index:99999;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;display:flex;flex-wrap:wrap;align-items:center;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}",
+      "#rd-menu{position:sticky;top:0;z-index:99999;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}",
+      "#rd-menu .rd-nav{max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center}",
       "#rd-menu .rd-brand{color:#0f172a !important;font-weight:800;padding:14px 18px;font-size:18px;letter-spacing:-.2px}",
       "#rd-menu .rd-brand b{color:#2563eb}",
       "#rd-menu .rd-spacer{flex:1}",
@@ -81,10 +82,10 @@
       "#rd-menu .rd-sub a{display:block;padding:10px 12px;border-radius:8px;color:#1f2937 !important;font-weight:500;font-size:14px}",
       "#rd-menu .rd-sub a:hover{background:#eff6ff;color:#1d4ed8 !important}",
       "@media (max-width:760px){" +
-        "#rd-menu{flex-wrap:nowrap;padding-bottom:0}" +
+        "#rd-menu .rd-nav{flex-wrap:nowrap;padding-bottom:0}" +
         "#rd-menu .rd-burger{display:flex;margin-left:auto}" +
         "#rd-menu .rd-links{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;padding:4px 10px 10px}" +
-        "#rd-menu.nav-open{flex-wrap:wrap}" +
+        "#rd-menu.nav-open .rd-nav{flex-wrap:wrap}" +
         "#rd-menu.nav-open .rd-links{display:flex}" +
         "#rd-menu .rd-spacer{display:none}" +
         "#rd-menu .rd-mi{width:100%}" +
@@ -96,7 +97,7 @@
       "}",
 
       /* ------------------------ CONTENEDOR ------------------------ */
-      "#rd-app{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;max-width:1120px;margin:0 auto;padding:26px 18px 50px}",
+      "#rd-app{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;max-width:1280px;margin:0 auto;padding:26px 18px 50px}",
       "#rd-app *{box-sizing:border-box}",
 
       /* ---------------------------- HERO -------------------------- */
@@ -189,7 +190,7 @@
 
       /* -------------------------- FOOTER -------------------------- */
       "#rd-foot{background:#111827;color:#cbd5e1;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin-top:40px}",
-      "#rd-foot .in{max-width:1120px;margin:0 auto;padding:48px 18px 28px}",
+      "#rd-foot .in{max-width:1280px;margin:0 auto;padding:48px 18px 28px}",
       "#rd-foot .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}",
       "#rd-foot h5{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin:0 0 16px}",
       "#rd-foot .brand{font-size:19px;font-weight:800;color:#fff !important;display:inline-block;margin-bottom:12px}",
@@ -242,9 +243,11 @@
     links += '<span class="rd-spacer"></span>';
     links += '<a class="rd-mi rd-cta" href="' + gradeLink("Primaria", "1° grado") + '">Explorar recursos</a>';
 
-    var html = '<a class="rd-brand" href="/">Recurso<b>Docentes</b></a>' +
+    var html = '<div class="rd-nav">' +
+               '<a class="rd-brand" href="/">Recurso<b>Docentes</b></a>' +
                '<button class="rd-burger" type="button" aria-label="Abrir menú" aria-expanded="false">' + burgerIcon + '</button>' +
-               '<div class="rd-links">' + links + '</div>';
+               '<div class="rd-links">' + links + '</div>' +
+               '</div>';
 
     var bar = document.createElement("nav");
     bar.id = "rd-menu";
