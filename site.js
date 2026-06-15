@@ -57,7 +57,10 @@
       ".rd-home .blog-posts,.rd-home .blog-pager,.rd-home .post-feeds,.rd-home .no-posts-message,.rd-home .FeaturedPost{display:none !important}",
       /* ocultar barra lateral de Contempo (Archivo / Etiquetas / Denunciar abuso) y ensanchar contenido */
       ".sidebar-container,.column-left-outer,.column-right-outer,.widget.BlogArchive,.widget.Label,.widget.ReportAbuse,#ReportAbuse1,.Attribution{display:none !important;width:0 !important}",
-      ".centered-bottom,.main-columns,.main-column-wrapper,.main-column,.column-center-outer,.column-center-inner,#Blog1,.Blog,.post-outer,.post,.post-body,.post-content,.blog-posts{width:100% !important;max-width:100% !important;float:none !important;margin:0 !important;padding:0 !important;border:0 !important}",
+      /* SOLO en la home: estirar el contenedor centrado de Contempo a todo el ancho */
+      ".rd-home .centered,.rd-home .page_body,.rd-home #main,.rd-home .centered-bottom,.rd-home .main,.rd-home .main-column,.rd-home .column-center-outer,.rd-home .column-center-inner,.rd-home .widget.Blog,.rd-home #Blog1{width:100% !important;max-width:100% !important;float:none !important;margin:0 !important;padding:0 !important;border:0 !important}",
+      /* SOLO en la home: ocultar el header nativo de Blogger, el título 'Entradas' y el footer de Blogger */
+      ".rd-home .centered-top-container,.rd-home .centered-top-placeholder,.rd-home .main-heading,.rd-home #footer,.rd-home .vertical-ad-container,.rd-home .blog-pager{display:none !important}",
       /* enlaces de Contempo no deben pintar de azul nuestras tarjetas */
       "#rd-app a,#rd-foot a,#rd-menu a{text-decoration:none}",
 
