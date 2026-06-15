@@ -56,8 +56,8 @@
       "#header,header#header,.header-outer,.Header,.header-widget,.cover-image,.page_body .centered-top-container{display:none !important}",
       ".rd-home .blog-posts,.rd-home .blog-pager,.rd-home .post-feeds,.rd-home .no-posts-message,.rd-home .FeaturedPost{display:none !important}",
       /* ocultar barra lateral de Contempo (Archivo / Etiquetas / Denunciar abuso) y ensanchar contenido */
-      ".sidebar-container,.column-left-outer,.column-right-outer,.widget.BlogArchive,.widget.Label,.widget.ReportAbuse,#ReportAbuse1,.Attribution{display:none !important}",
-      ".main-column,.column-center-outer,.centered-bottom .main-column-wrapper{width:100% !important;max-width:100% !important;float:none !important;margin:0 !important;padding:0 !important}",
+      ".sidebar-container,.column-left-outer,.column-right-outer,.widget.BlogArchive,.widget.Label,.widget.ReportAbuse,#ReportAbuse1,.Attribution{display:none !important;width:0 !important}",
+      ".centered-bottom,.main-columns,.main-column-wrapper,.main-column,.column-center-outer,.column-center-inner,#Blog1,.Blog,.post-outer,.post,.post-body,.post-content,.blog-posts{width:100% !important;max-width:100% !important;float:none !important;margin:0 !important;padding:0 !important;border:0 !important}",
       /* enlaces de Contempo no deben pintar de azul nuestras tarjetas */
       "#rd-app a,#rd-foot a,#rd-menu a{text-decoration:none}",
 
@@ -97,7 +97,7 @@
       "}",
 
       /* ------------------------ CONTENEDOR ------------------------ */
-      "#rd-app{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;max-width:none;margin:0;padding:26px clamp(20px,4vw,56px) 50px}",
+      "#rd-app{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;width:100%;max-width:100%;margin:0;padding:26px clamp(20px,4vw,56px) 50px}",
       "#rd-app *{box-sizing:border-box}",
 
       /* ---------------------------- HERO -------------------------- */
