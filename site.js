@@ -178,6 +178,10 @@
       /* ------------------------- LISTADO -------------------------- */
       ".rd-bc{margin:6px 0 18px;font-size:14px;color:#64748b}.rd-bc a{color:#2563eb !important;font-weight:700}",
       ".rd-chips{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 24px}",
+      /* fila de navegación (Grados / Materias) con etiqueta a la izquierda */
+      ".rd-gradenav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px}",
+      ".rd-navlbl{font-size:13px;font-weight:800;color:#64748b;letter-spacing:.02em;flex:none}",
+      ".rd-gradenav .rd-chips{margin:0}",
       ".rd-chip{font-size:13.5px;padding:8px 16px;border-radius:999px;border:1px solid #d6dce4;color:#334155 !important;font-weight:600;background:#fff}",
       ".rd-chip:hover{border-color:#94a3b8}",
       ".rd-chip.on{background:#2563eb;color:#fff !important;border-color:#2563eb}",
@@ -420,15 +424,31 @@
   function renderListing(nivel, grado, materia) {
     var labels = [nivel, grado]; if (materia) labels.push(materia);
     var bc = '<p class="rd-bc"><a href="/">← Inicio</a> &nbsp;›&nbsp; ' + esc(nivel) + ' &nbsp;›&nbsp; ' + esc(grado) + '</p>';
-    var chips = '<div class="rd-chips"><a class="rd-chip' + (materia ? "" : " on") + '" href="' +
-                gradeLink(nivel, grado) + '">Todas</a>';
+
+    // Selector de GRADO: saltar a otro grado del mismo nivel sin volver al Inicio.
+    var grados = TAX[nivel] || [];
+    var gradeNav = '';
+    if (grados.length > 1) {
+      var gc = '';
+      grados.forEach(function (g) {
+        gc += '<a class="rd-chip' + (g === grado ? " on" : "") + '" href="' +
+          gradeLink(nivel, g) + '">' + g.split("°")[0] + '°</a>';
+      });
+      gradeNav = '<div class="rd-gradenav"><span class="rd-navlbl">Grados:</span>' +
+                 '<div class="rd-chips">' + gc + '</div></div>';
+    }
+
+    // Filtros de MATERIA.
+    var mc = '<a class="rd-chip' + (materia ? "" : " on") + '" href="' + gradeLink(nivel, grado) + '">Todas</a>';
     MNAMES.forEach(function (mt) {
-      chips += '<a class="rd-chip' + (materia === mt ? " on" : "") + '" href="' +
+      mc += '<a class="rd-chip' + (materia === mt ? " on" : "") + '" href="' +
         gradeLink(nivel, grado) + "&mat=" + encodeURIComponent(mt) + '">' + mt + '</a>';
     });
-    chips += '</div>';
+    var matNav = '<div class="rd-gradenav"><span class="rd-navlbl">Materias:</span>' +
+                 '<div class="rd-chips">' + mc + '</div></div>';
+
     APP.innerHTML = '<section class="rd-sec"><p class="sk">' + esc(nivel) + '</p><h2 class="sh">' + esc(grado) +
-                    '</h2>' + bc + chips + '<div id="rd-list" class="rd-loading">Cargando fichas…</div></section>';
+                    '</h2>' + bc + gradeNav + matNav + '<div id="rd-list" class="rd-loading">Cargando fichas…</div></section>';
 
     fetch(feedUrl(labels)).then(function (r) { return r.json(); }).then(function (d) {
       var entries = (d.feed && d.feed.entry) || [];
