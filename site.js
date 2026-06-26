@@ -13,8 +13,8 @@
 
   /* ---- CONFIG: grados con contenido (agrega aquí al crecer) ---- */
   var TAX = {
-    "Primaria":   ["1° grado", "2° grado", "3° grado", "4° grado", "5° grado"],
-    "Secundaria": ["1° grado"]
+    "Primaria":   ["1° grado", "2° grado", "3° grado", "4° grado", "5° grado", "6° grado"],
+    "Secundaria": ["1° grado", "2° grado"]
   };
   var MATERIAS = [
     { name: "Matemáticas", glyph: "M", color: "#2563eb", surface: "#eff6ff", border: "#bfdbfe", desc: "Cálculo, geometría, problemas" },
